@@ -6,6 +6,8 @@
 
 #include "manna-harbour_miryoku.h"
 
+#include "keymap_dvorak.h"
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #if defined MIRYOKU_LAYERS_FLIP
   [BASE] = LAYOUT_miryoku(
@@ -139,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     U_NP,              U_NP,              LT(MEDIA, KC_ESC), LT(NAV, KC_SPC),   LT(MOUSE, KC_TAB), LT(SYM, KC_ENT),   LT(NUM, KC_BSPC),  LT(FUN, KC_DEL),   U_NP,              U_NP
   #elif defined MIRYOKU_ALPHAS_QWERTY
     KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,
-    LGUI_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LGUI_T(KC_QUOT),
+    LGUI_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LGUI_T(KC_COLN),
     KC_Z,              ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,
     U_NP,              U_NP,              LT(MEDIA, KC_ESC), LT(NAV, KC_SPC),   LT(MOUSE, KC_TAB), LT(SYM, KC_ENT),   LT(NUM, KC_BSPC),  LT(FUN, KC_DEL),   U_NP,              U_NP
   #else
@@ -195,16 +197,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     U_NP,    U_NP,    KC_BTN2, KC_BTN3, KC_BTN1, KC_BTN1, KC_BTN3, KC_BTN2, U_NP,    U_NP
   ),
   [NUM] = LAYOUT_miryoku(
-    KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    KC_SCLN, KC_4,    KC_5,    KC_6,    KC_EQL,  U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    KC_GRV,  KC_1,    KC_2,    KC_3,    KC_BSLS, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
-    U_NP,    U_NP,    KC_DOT,  KC_0,    KC_MINS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
+    DV_LBRC, KC_7,    KC_8,    KC_9,    DV_RBRC, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    DV_SCLN, KC_4,    KC_5,    KC_6,    DV_EQL,  U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    DV_GRV,  KC_1,    KC_2,    KC_3,    DV_BSLS, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+    U_NP,    U_NP,    DV_DOT,  KC_0,    DV_MINS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
   ),
   [SYM] = LAYOUT_miryoku(
-    KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    KC_COLN, KC_DLR,  KC_PERC, KC_CIRC, KC_PLUS, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_PIPE, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
-    U_NP,    U_NP,    KC_LPRN, KC_RPRN, KC_UNDS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
+    DV_LCBR, DV_AMPR, DV_ASTR, DV_LPRN, DV_RCBR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    DV_COLN, DV_DLR,  DV_PERC, DV_CIRC, DV_PLUS, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    DV_TILD, DV_EXLM, DV_AT,   DV_HASH, DV_PIPE, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+    U_NP,    U_NP,    DV_LPRN, DV_RPRN, DV_UNDS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
   ),
   [FUN] = LAYOUT_miryoku(
     KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_PSCR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
