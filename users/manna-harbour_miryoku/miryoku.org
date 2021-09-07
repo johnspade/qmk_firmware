@@ -263,10 +263,10 @@ are in the standard numpad locations with symbols in the remaining positions.
 Dot is duplicated from the base layer.
 
 #+NAME: num-l
-| [    | 7    | 8    | 9    | ]    |
-| ;    | 4    | 5    | 6    | =    |
-| `    | 1    | 2    | 3    | \    |
-| U_NP | U_NP | DOT  | 0    | MINS |
+| U_NP    | 7      | 8        | 9      | DV_PLUS |
+| DV_BSLS | 4      | 5        | 6      | DV_EQL  |
+| DV_GRV  | 1      | 2        | 3      | DV_SLSH |
+| U_NP    | U_NP   | DV_DOT   | 0      | DV_MINS |
 
 
 *** Sym
@@ -278,10 +278,10 @@ chording when using mods with shifted symbols.  Open parenthesis is duplicated
 next to close parenthesis.
 
 #+NAME: sym-l
-| {    | &    | *    | (    | }    |
-| :    | $    | %    | ^    | +    |
-| ~    | !    | @    | #    | PIPE |
-| U_NP | U_NP | (    | )    | _    |
+| DV_CIRC | DV_AMPR | DV_ASTR | DV_LCBR | DV_RCBR |
+| DV_PIPE | DV_DLR  | DV_PERC | DV_LBRC | DV_RBRC |
+| DV_TILD | DV_EXLM | DV_AT   | DV_HASH | DV_QUES |
+| U_NP    | U_NP    | DV_LPRN | DV_RPRN | DV_UNDS |
 
 
 *** Fun
@@ -369,7 +369,7 @@ building, e.g. ~MIRYOKU_ALPHAS=QWERTY~.
 
 #+NAME: qwerty
 | Q    | W    | E    | R    | T    | Y    | U    | I    | O    | P    |
-| A    | S    | D    | F    | G    | H    | J    | K    | L    | '    |
+| A    | S    | D    | F    | G    | H    | J    | K    | L    | :    |
 | Z    | X    | C    | V    | B    | N    | M    | ,    | DOT  | /    |
 
 
@@ -877,7 +877,7 @@ Keycodes that match any of these prefixes will not have ~KC_~ automatically
 prepended.
 
 #+NAME: nonkc
-| U_ | RGB_ | RESET | S( | C( | SCMD( | LCMD( |
+| U_ | RGB_ | RESET | S( | C( | SCMD( | LCMD( | DV_
 
 
 *** header
@@ -1044,6 +1044,8 @@ Contains the keymap.  Added from ~rules.mk~.
 <<license-qmk>>
 
 #include "manna-harbour_miryoku.h"
+
+#include "keymap_dvorak.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #if defined MIRYOKU_LAYERS_FLIP

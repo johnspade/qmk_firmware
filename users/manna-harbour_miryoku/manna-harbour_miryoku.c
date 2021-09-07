@@ -197,15 +197,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     U_NP,    U_NP,    KC_BTN2, KC_BTN3, KC_BTN1, KC_BTN1, KC_BTN3, KC_BTN2, U_NP,    U_NP
   ),
   [NUM] = LAYOUT_miryoku(
-    DV_LBRC, KC_7,    KC_8,    KC_9,    DV_RBRC, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    DV_SCLN, KC_4,    KC_5,    KC_6,    DV_EQL,  U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    DV_GRV,  KC_1,    KC_2,    KC_3,    DV_BSLS, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+    U_NP,    KC_7,    KC_8,    KC_9,    DV_PLUS, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    DV_BSLS, KC_4,    KC_5,    KC_6,    DV_EQL,  U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    DV_GRV,  KC_1,    KC_2,    KC_3,    DV_SLSH, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
     U_NP,    U_NP,    DV_DOT,  KC_0,    DV_MINS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
   ),
   [SYM] = LAYOUT_miryoku(
-    DV_LCBR, DV_AMPR, DV_ASTR, DV_LPRN, DV_RCBR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    DV_COLN, DV_DLR,  DV_PERC, DV_CIRC, DV_PLUS, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    DV_TILD, DV_EXLM, DV_AT,   DV_HASH, DV_PIPE, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+    DV_CIRC, DV_AMPR, DV_ASTR, DV_LCBR, DV_RCBR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    DV_PIPE, DV_DLR,  DV_PERC, DV_LBRC, DV_RBRC, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    DV_TILD, DV_EXLM, DV_AT,   DV_HASH, DV_QUES, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
     U_NP,    U_NP,    DV_LPRN, DV_RPRN, DV_UNDS, U_NA,    U_NA,    U_NA,    U_NP,    U_NP
   ),
   [FUN] = LAYOUT_miryoku(
